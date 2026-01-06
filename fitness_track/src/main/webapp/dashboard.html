@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tracker - Smart Health</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="nav-left">
+        <span class="brand">Smart Health</span>
+    </div>
+
+    <div class="nav-links">
+        <a href="dashboard.html" class="active">Daily Tracker</a>
+        <a href="db.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="bmi.html">BMI</a>
+        <a href="blog.html">Blogs</a>
+        <a href="trainers.html">Trainers</a>
+        <button id="logoutBtn" class="nav-link-btn">Log out</button>
+    </div>
+</div>
+
+    <div class="sh-header">
+    <div>
+        <h2>Daily Tracker</h2>
+        <p class="sh-sub">Today's health summary</p>
+    </div>
+</div>
+    
+
+        <div class="card-container">
+
+            <!-- Workouts -->
+            <div class="sh-card">
+                <h3>Workouts</h3>
+                <div id="dashWorkout"></div>
+                <a href="workout.html"><button class="sh-btn-blue">📘 Add Log Details</button></a>
+            </div>
+
+            <!-- Meals -->
+            <div class="sh-card">
+                <h3>Meals</h3>
+                <div id="dashMeals"></div>
+                <a href="meals.html">
+    <button class="sh-btn-blue">📘 Add Log Details</button>
+
+</a>
+            </div>
+
+            <!-- Daily Logs -->
+            <div class="sh-card">
+                <h3>Daily Logs</h3>
+                <div id="dashLog"></div>
+                <a href="logs.html"><button class="sh-btn-blue">📘 Add Log Details</button></a>
+            </div>
+
+        </div>
+
+      
+    </div>
+
+    <script src="js/dashboard.js"></script>
+    <script>
+document.getElementById("logoutBtn")?.addEventListener("click", () => {
+    localStorage.removeItem("sha_token");
+    location.href = "login.html";
+});
+</script>
+</body>
+</html>
